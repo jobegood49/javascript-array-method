@@ -5,32 +5,32 @@ const names = [
   'Mr. Joseph',
   'Mr. Paul',
   'Mrs. Paula',
-  'Mr. Hakim',
+  'Mr. Hakim'
 ]
 
 console.log(names)
 
-//Display names
-let names_mapped = names.map(name => {
+// Display names
+let namesMapped = names.map(name => {
   return name + ' was mapped'
 })
-let names_loopped = names.forEach(name => {
+
+let namesLooped = names.forEach(name => {
   console.log(name + ' was looped')
   return name + ' was looped'
 })
 
-console.log('names mapped', names_mapped)
-console.log('names looped', names_loopped)
+console.log('names mapped', namesMapped)
+console.log('names looped', namesLooped)
 
-//Display all names with Mr. title
+// Display all names with Mr. title
 let males = names
   .filter(name => name.includes('Mr.'))
-  .map(name => {
-    return name + ' (name)'
-  })
+  .map(name => name + ' (male)')
+
 console.log('males', males)
 
-//Search a name inside the list of names
+// Search a name inside the list of names
 
 let searchName = person => {
   const foundName = names.find(name => {
@@ -66,7 +66,7 @@ const namesBadData = [
   'Mrs. Paula',
   7,
   22,
-  'Mr. Hakim',
+  'Mr. Hakim'
 ]
 
 const cleanDataNames = namesBadData.filter(data => typeof data === 'string')
